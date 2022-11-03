@@ -1,0 +1,139 @@
+$navBarClr: rgb(242, 242, 242);
+$hoverClr: rgba(250, 109, 89, 0.5);
+$navBorder: rgb(169, 169, 169);
+$padding: 12px 18px;
+
+.task_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding;
+  overflow-y: scroll;
+
+  .task_list,
+  .task_header {
+    width: 90%;
+  }
+  //Task_outer includes button and notes for column display
+  .task_outer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: $padding;
+    background-color: $navBarClr;
+    margin-top: 12px;
+  }
+
+  .task_display {
+    width: 100%;
+  }
+
+  .task_display,
+  .task_header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .task_priority {
+    margin-right: 12px;
+  }
+
+  .task_outer:hover + .task_note:not(:empty) {
+    display: block;
+  }
+  .task_note {
+    display: none;
+    padding: $padding;
+    text-align: center;
+    background-color: $navBarClr;
+    width: 100%;
+  }
+
+  input[type="checkbox"]:checked + .task_display {
+    opacity: 0.2;
+  }
+
+  .task_remove_button {
+    border: none;
+    padding: 3px;
+    &:hover {
+      background-color: $hoverClr;
+    }
+  }
+}
+
+.button_create_task {
+  width: 90%;
+  margin-top: 12px;
+  margin-left: 24px;
+  padding: $padding;
+  background-color: $hoverClr;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover {
+    transition: transform 0.3s;
+    transform: scale(1.01);
+    background-color: rgb(248, 148, 134);
+  }
+}
+
+.task_form {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  .form_container {
+    background-color: $navBorder;
+    width: fit-content;
+    padding: $padding;
+    border: rgba(0, 0, 0, 0.75) solid 5px;
+
+    border-radius: 3%;
+    margin: 0 auto;
+    input:not([type="button"]):not([type="submit"]):not([type="reset"]),
+    select {
+      border: $navBorder solid 1px;
+      border-radius: 5px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    input[name="Notes"] {
+      height: 4rem;
+      text-align: center;
+    }
+
+    input[type="button"],
+    input[type="submit"],
+    input[type="reset"] {
+      margin: $padding;
+      padding: $padding;
+      background-color: $hoverClr;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 700;
+      &:hover {
+        background-color: rgb(248, 148, 134);
+      }
+    }
+
+    .button_container {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

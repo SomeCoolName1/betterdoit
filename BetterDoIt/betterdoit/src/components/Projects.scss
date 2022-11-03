@@ -1,0 +1,42 @@
+$navBarClr: rgb(242, 242, 242);
+$hoverClr: rgba(250, 109, 89, 0.5);
+$navBorder: rgb(169, 169, 169);
+$padding: 12px 18px;
+
+.nav_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 15%;
+  padding: $padding;
+  background-color: $navBarClr;
+
+  input {
+    border: $navBorder solid 1px;
+    border-radius: 5px;
+    width: 80%;
+  }
+  button {
+    border: transparent;
+    padding: $padding;
+    width: 100%;
+    margin: 0 auto;
+    &:focus,
+    &:hover {
+      background-color: $hoverClr;
+      transition: 0.25s;
+    }
+  }
+}
+
+.lineSeperator {
+  margin: 10px;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(169, 169, 169, 0),
+    rgba(169, 169, 169, 100),
+    rgba(169, 169, 169, 0)
+  );
+}
