@@ -26,14 +26,15 @@ $padding: 12px 18px;
     margin-top: 12px;
   }
 
-  .task_display {
-    width: 100%;
-  }
-
   .task_display,
   .task_header {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .task_header {
+    text-align: center;
   }
 
   .task_priority {
@@ -62,6 +63,18 @@ $padding: 12px 18px;
       background-color: $hoverClr;
     }
   }
+}
+
+.task_date {
+  text-align: center;
+}
+
+.task_priority {
+  text-align: end;
+}
+
+.task_note {
+  font-size: small;
 }
 
 .button_create_task {

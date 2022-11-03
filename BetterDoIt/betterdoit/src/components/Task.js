@@ -133,12 +133,13 @@ const TaskList = (props) => {
                 name="Title"
                 id="Title"
                 className="form_title"
+                required
               />
               <div>
                 <label htmlFor="DueDate">Due Date</label>
-                <input type="date" name="DueDate" />
+                <input type="date" name="DueDate" required />
                 <label htmlFor="Priority">Priority</label>
-                <select name="Priority">
+                <select name="Priority" required>
                   <option value="Low">Low</option>
                   <option value="Medium">Medium</option>
                   <option value="High">High</option>
