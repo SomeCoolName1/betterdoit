@@ -9,7 +9,6 @@ The primary focus of this project is to gain familiarity with the use of LocalSt
 - Simple HTML, CSS, and JavaScript
 - React
 - LocalStorage
-- SCSS
 
 **Features:**
 
